@@ -5,4 +5,5 @@
   *data.txt* adlı metin dosyasına daha anlamlı bir biçimde yazıyor.
      
   --MQTTnet kütüphanesi kullanılarak yapılmıştır.
+  
   --Cihaz ve MQTT Broker aynı yerel ağda bulunmaktadır.
