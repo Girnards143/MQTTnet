@@ -13,7 +13,11 @@ namespace MQTT_SUB
     {
         public class Content
         {
+<<<<<<< Updated upstream
             //Yeni eklenen
+=======
+	    //Naber ulan ??
+>>>>>>> Stashed changes
             public IList<string> format { get; set; }
             public IList<IList<string>> value { get; set; }
         }
