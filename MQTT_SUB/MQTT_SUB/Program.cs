@@ -13,6 +13,7 @@ namespace MQTT_SUB
     {
         public class Content
         {
+            //Yeni eklenen
             public IList<string> format { get; set; }
             public IList<IList<string>> value { get; set; }
         }
