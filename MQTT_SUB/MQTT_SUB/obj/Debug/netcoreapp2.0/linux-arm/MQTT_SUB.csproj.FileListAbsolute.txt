@@ -1,0 +1,14 @@
+C:\Users\Bedirhan Çelik\Desktop\Workshop C#\MQTT\MQTT_SUB\MQTT_SUB\bin\Debug\netcoreapp2.0\linux-arm\libhostpolicy.so
+C:\Users\Bedirhan Çelik\Desktop\Workshop C#\MQTT\MQTT_SUB\MQTT_SUB\bin\Debug\netcoreapp2.0\linux-arm\libhostfxr.so
+C:\Users\Bedirhan Çelik\Desktop\Workshop C#\MQTT\MQTT_SUB\MQTT_SUB\bin\Debug\netcoreapp2.0\linux-arm\MQTT_SUB
+C:\Users\Bedirhan Çelik\Desktop\Workshop C#\MQTT\MQTT_SUB\MQTT_SUB\bin\Debug\netcoreapp2.0\linux-arm\MQTT_SUB.deps.json
+C:\Users\Bedirhan Çelik\Desktop\Workshop C#\MQTT\MQTT_SUB\MQTT_SUB\bin\Debug\netcoreapp2.0\linux-arm\MQTT_SUB.runtimeconfig.json
+C:\Users\Bedirhan Çelik\Desktop\Workshop C#\MQTT\MQTT_SUB\MQTT_SUB\bin\Debug\netcoreapp2.0\linux-arm\MQTT_SUB.runtimeconfig.dev.json
+C:\Users\Bedirhan Çelik\Desktop\Workshop C#\MQTT\MQTT_SUB\MQTT_SUB\bin\Debug\netcoreapp2.0\linux-arm\MQTT_SUB.dll
+C:\Users\Bedirhan Çelik\Desktop\Workshop C#\MQTT\MQTT_SUB\MQTT_SUB\bin\Debug\netcoreapp2.0\linux-arm\MQTT_SUB.pdb
+C:\Users\Bedirhan Çelik\Desktop\Workshop C#\MQTT\MQTT_SUB\MQTT_SUB\obj\Debug\netcoreapp2.0\linux-arm\MQTT_SUB.csprojAssemblyReference.cache
+C:\Users\Bedirhan Çelik\Desktop\Workshop C#\MQTT\MQTT_SUB\MQTT_SUB\obj\Debug\netcoreapp2.0\linux-arm\MQTT_SUB.csproj.CoreCompileInputs.cache
+C:\Users\Bedirhan Çelik\Desktop\Workshop C#\MQTT\MQTT_SUB\MQTT_SUB\obj\Debug\netcoreapp2.0\linux-arm\MQTT_SUB.AssemblyInfoInputs.cache
+C:\Users\Bedirhan Çelik\Desktop\Workshop C#\MQTT\MQTT_SUB\MQTT_SUB\obj\Debug\netcoreapp2.0\linux-arm\MQTT_SUB.AssemblyInfo.cs
+C:\Users\Bedirhan Çelik\Desktop\Workshop C#\MQTT\MQTT_SUB\MQTT_SUB\obj\Debug\netcoreapp2.0\linux-arm\MQTT_SUB.dll
+C:\Users\Bedirhan Çelik\Desktop\Workshop C#\MQTT\MQTT_SUB\MQTT_SUB\obj\Debug\netcoreapp2.0\linux-arm\MQTT_SUB.pdb

@@ -1,0 +1,114 @@
+1.Gereklilikler:
+	1-Local Network.
+	2-MQTT Broker on Local Network.
+	3-An ethernet wire.
+	4-MQTT Subscriber Client.
+
+2.Cihaz ayarlarý:
+
+     2.1 
+	Cihazý ethernet kablosuyla local networke baðladýktan sonra  
+local networkun internet parametrelerini (command promptan "ipconfig"
+ile IPv4, Subnet Mask, Default Gateway) cihaza yazmak için;
+	
+	Örnek olarak;
+	IPv4 = 192.168.1.102, Subnet Mask = 255.255.255.0 
+	Default Gateway=192.168.1.1
+	varsayalým.
+
+     2.2
+
+	--Coverýn menüsünde sað altta bulunan menü butonuna týkladýktan
+	  sonra Service butotuna týklayýn.(Þifre=520512)
+	
+	--"Central Network Settings" cihazýn MQTT Broker a baðlanacaðý ayarlarý
+	  temsil ediyor. "Central Station Ip" bölümüne local networkun IPv4
+	  deðerini (192.168.1.102) yazýn.
+	
+	--"Central Station Port" bölümüne 1883 yazýn.
+	
+	--"Local UUID" Coverýn IDsini temsil eder.Bunu not alýn.
+	
+	--"Network Type Setting" butonuna týklayýn ve "LAN" seçin.
+	
+	--"Local Network Setting"butonuna týklayýn ve "IP" için 
+	  192.168.1.XXX olacak þekilde rastgele bir IP verin.
+
+	--"Gateway" için local networkun Default Gateway deðerini
+	  (örnek olarak verilen 192.168.1.1) girin.
+
+	--"Subnet Mask" için locak networkun Subnet Mask deðerini
+	  (örnek olarak verilen 255.255.255.0) girin.
+
+	--Ayarlarýn yenilenmesi için Coverý kapatýp tekrar açýn.
+
+3.Local Network Ayarlarý
+
+	3.1
+	
+    MQTT Broker(windows):
+	--MQTT Broker için ücretsiz hizmet veren MQTT Broker Mosquitto kullandým.
+	  "https://mosquitto.org/download/" adresinden indirilebilir.(Ýndirirken
+	  Windows Servis seçeneðini etkinleþtirmeyi unutmayýn) Windowsta
+	  brokerýn çalýþmasý için ek .dll dosyalarý gerekiyor.Bunlarda;
+
+	  "ftp://sources.redhat.com/pub/pthreads-win32/dll-latest/dll/x86/" adresindeki
+	  pthreadVC2.dll yi indirip mosquittonun dosya dizinine ekleyin.	 
+
+	  "http://slproweb.com/products/Win32OpenSSL.html" adresindeki 
+	  "Win32 OpenSSL v1.0.2o Light" sürümünü indirip içindeki "libeay32.dll" ve
+	  "ssleay32.dll" dosyalarýný mosquittonun dosya dizinine ekleyin.
+
+	--Artýk MQTT Broker bilgisayar her açýldýðýnda Windows Servis sayesinde
+	  çalýþacaktýr.
+	
+    MQTT Broker(Linux-Ubuntu):
+	1. Ubuntu'ya root ile giriþ yapalým
+
+	2. Aþaðýdaki komut ile mosquitto deposunu ekleyelim
+
+	sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa
+	sudo apt-get update
+	
+	3. Mosquitto broker paketini yüklemek için aþaðýdaki komutu çalýþtýralým
+
+	sudo apt-get install mosquitto
+	
+	4. MQTT client için geliþtirici kütüphanelerini yüklemek için aþaðýdaki komutu çalýþtýralým
+
+	sudo apt-get install libmosquitto-dev
+	
+	5. MQTT client pketlerini yüklemek için aþaðýdaki komutu çalýþtýralým
+
+	sudo apt-get install mosquitto-clients
+	
+	6. Mosquitto broker çalýþýyor olduðundan emin olalým
+
+	sudo service mosquitto status
+	
+	7.Servisi otomatik baþlatmak için
+	
+	systemctl enable mosquitto
+
+
+	3.2
+
+    MQTT Subscriber Client:
+
+	--MQTT_SUB kodu serverýn IP sini (örnek olarak verdiðimiz 192.168.1.102)
+	  topic yani "workstation/LOCAL UUID/up" (LOCAL UUID 2.2 de not aldýðýnýz ID)
+	  doldurduktan sonra baþlamaya hazýrdýr.	
+
+	--MQTT_SUB kodu servera baðlanarak verilen topic adresine subscribe oluyor.
+	  Gelen json formatýndaki datayý convert ederek gerekli parametreleri data.txt
+	  dosyasýna yazýyor.
+
+ÖZET:
+	Cihazýn IP ayarlarý yapýldýktan sonra ethernet kablosuyla local networke baðlanýr.
+	Eðer IP ayarlarý doðru yapýlandýrýldýysa cihaz otomatik olarak "workstation/LOCAL UUID/up"
+	topic'ine 30 saniyede bir publish eder.Bizde MQTT_SUB programýyla client olarak serverýn
+	"workstation/LOCAL UUID/up" topic'ini dinleriz ve json formatýndaki veriyi anlamlý bir þekilde
+	data.txt dosyasýna ekleriz.
+
+
+    

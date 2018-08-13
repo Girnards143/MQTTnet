@@ -1,0 +1,8 @@
+drugName:Demo-NO Infu.-dopamine(i)
+totalVolume:7.01ml
+rate:80ml/h
+VTBI:0ml
+drugName:Invalid Test
+totalVolume:0.02ml
+rate:20ml/h
+VTBI:10ml
